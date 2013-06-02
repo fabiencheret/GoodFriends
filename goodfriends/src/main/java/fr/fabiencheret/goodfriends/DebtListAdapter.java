@@ -37,12 +37,6 @@ public class DebtListAdapter extends BaseAdapter {
 
     @AfterInject
     void initAdapter() {
-        Debt debt1 = new Debt(0,new User(0, "fabien"),true,"a Harry Potter book");
-        Debt debt2 = new Debt(1,new User(0, "fabien"),true,"an owl");
-        Debt debt3 = new Debt(2,new User(0, "fabien2"),true,"a cup of tea");
-        myDatabase.store(debt1);
-        myDatabase.store(debt2);
-        myDatabase.store(debt3);
         debts = myDatabase.getAllDebts();
     }
 
